@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://ch753ojekcav"]
+
+[ext_resource type="Texture2D" uid="uid://b2m7y1fccf553" path="res://4e090a2d1f2b3c12e52f2dd7de8d4e91.png" id="1_jex7p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3e1g"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(0, 0, 309, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wug58"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(309, 0, 309, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m47da"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(618, 0, 309, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vrs4"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(927, 0, 309, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej0xb"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(1236, 0, 309, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isoje"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(1545, 0, 309, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clntn"]
+atlas = ExtResource("1_jex7p")
+region = Rect2(1854, 0, 309, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxagw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3e1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wug58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m47da")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vrs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej0xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isoje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clntn")
+}],
+"loop": true,
+"name": &"gongji",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u20r8"]
+radius = 111.0
+height = 222.0
+
+[node name="Area2D" type="Area2D" unique_id=2103596240]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=771979148]
+sprite_frames = SubResource("SpriteFrames_qxagw")
+animation = &"gongji"
+autoplay = "gongji"
+frame_progress = 0.25388217
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=589945921]
+position = Vector2(18, 104)
+shape = SubResource("CapsuleShape2D_u20r8")

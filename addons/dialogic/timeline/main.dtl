@@ -1,0 +1,10 @@
+join nv leftmost [animation="Bounce In" wait="true"]
+nv: 嗨，你好！
+join nan right [animation="Bounce In" wait="true"]
+nan: 这里是蝴蝶谷，
+nan: 如今地球环境正在慢慢衰败，散落在这片山谷的蝴蝶碎片，拥有唤醒生机的神奇力量。
+join nv leftmost [animation="Bounce In" wait="true"]
+join nan right [animation="Bounce In" wait="true"]
+你准备好出发了吗？
+- 我准备好了！
+- 我想先了解碎片怎么收集

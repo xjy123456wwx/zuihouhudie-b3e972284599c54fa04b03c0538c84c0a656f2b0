@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cw7if8jvwtx8o"]
+
+[ext_resource type="Texture2D" uid="uid://bwy3y53dftorw" path="res://693f9406462fceba210f0cfcc8a0908f.png" id="1_rokp8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7rqd"]
+atlas = ExtResource("1_rokp8")
+region = Rect2(0, 0, 1660, 2287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cakvp"]
+atlas = ExtResource("1_rokp8")
+region = Rect2(1660, 0, 1660, 2287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgdxr"]
+atlas = ExtResource("1_rokp8")
+region = Rect2(3320, 0, 1660, 2287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbbwq"]
+atlas = ExtResource("1_rokp8")
+region = Rect2(0, 2287, 1660, 2287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2w03"]
+atlas = ExtResource("1_rokp8")
+region = Rect2(1660, 2287, 1660, 2287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x271"]
+atlas = ExtResource("1_rokp8")
+region = Rect2(3320, 2287, 1660, 2287)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kp7xt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7rqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cakvp")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_pgdxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbbwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2w03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x271")
+}],
+"loop": false,
+"name": &"qingwatiao",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rokp8"]
+radius = 329.0
+height = 938.0
+
+[node name="Area2D" type="Area2D" unique_id=1890073884]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=347047565]
+sprite_frames = SubResource("SpriteFrames_kp7xt")
+animation = &"qingwatiao"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1671705819]
+position = Vector2(65, 509)
+shape = SubResource("CapsuleShape2D_rokp8")

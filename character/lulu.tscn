@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dbaar27i6ont"]
+
+[ext_resource type="Texture2D" uid="uid://cw5dvs712ruhe" path="res://texiao/114ab6df5141e050e7bb947ba387b91d.png" id="1_k6p5l"]
+[ext_resource type="Texture2D" uid="uid://cm20yqts6idmf" path="res://assert/79852cab47be4e15bc03864db8f4c2b4.png" id="1_n8lns"]
+[ext_resource type="Script" uid="uid://dhd1tsupojl4l" path="res://enemy-move.gd" id="1_x5wv5"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_x5wv5"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_fjxul"]
+colors = PackedColorArray(0.16109648, 0.27894965, 0.13392305, 0.20392157, 0.28434026, 0.46959668, 0.11426953, 0.23921569)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v8exx"]
+gradient = SubResource("Gradient_fjxul")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nxug2"]
+particle_flag_disable_z = true
+angle_min = 180.00002
+angle_max = 180.00002
+spread = 17.034
+gravity = Vector3(0, 98, 0)
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_v8exx")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6p5l"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(0, 994, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5wv5"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(867, 994, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjxul"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(1734, 994, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8exx"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(2601, 994, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxug2"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(0, 0, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh74e"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(867, 0, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqy3k"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(1734, 0, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vasg7"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(2601, 0, 867, 994)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_innuq"]
+atlas = ExtResource("1_n8lns")
+region = Rect2(3468, 0, 867, 994)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fxasu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6p5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5wv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjxul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8exx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxug2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh74e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqy3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vasg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_innuq")
+}],
+"loop": true,
+"name": &"gongji zoulu",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n8lns"]
+radius = 240.9618
+height = 968.2236
+
+[node name="Area2D" type="Area2D" unique_id=960926264 groups=["enemy"]]
+collision_layer = 2
+collision_mask = 33
+script = ExtResource("1_x5wv5")
+speed = 100.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=636534544]
+material = SubResource("CanvasItemMaterial_x5wv5")
+position = Vector2(-148, 43)
+amount = 26
+texture = ExtResource("1_k6p5l")
+lifetime = 2.0
+speed_scale = 2.28
+explosiveness = 0.18
+randomness = 0.67
+process_material = SubResource("ParticleProcessMaterial_nxug2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=585880950]
+sprite_frames = SubResource("SpriteFrames_fxasu")
+animation = &"gongji zoulu"
+autoplay = "gongji zoulu"
+frame_progress = 0.9663252
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=128031771]
+position = Vector2(16, 68)
+rotation = 0.44738522
+shape = SubResource("CapsuleShape2D_n8lns")

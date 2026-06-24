@@ -1,0 +1,699 @@
+[gd_scene format=3 uid="uid://dlb4exfprlhn6"]
+
+[node name="Node2D" type="Node2D" unique_id=89055984]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=95893857]
+offset_right = 1152.0
+offset_bottom = 128.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1242975512]
+offset_left = -312.0
+offset_top = -584.0
+offset_right = 584.0
+offset_bottom = -456.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1158741148]
+offset_left = -312.0
+offset_top = -456.0
+offset_bottom = 128.0
+color = Color(0.12591085, 0.12591085, 0.12591082, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1156732715]
+offset_left = 456.0
+offset_top = -768.0
+offset_right = 584.0
+offset_bottom = -576.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=2015557529]
+offset_left = 1032.0
+offset_top = -192.0
+offset_right = 1152.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=620032538]
+offset_left = 1136.0
+offset_top = -128.0
+offset_right = 2496.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=246670622]
+offset_left = 584.0
+offset_top = -768.0
+offset_right = 2184.0
+offset_bottom = -640.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="." unique_id=675561255]
+offset_left = 2056.0
+offset_top = -1024.0
+offset_right = 2184.0
+offset_bottom = -768.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="." unique_id=1137276741]
+offset_left = 2368.0
+offset_top = -64.0
+offset_right = 2496.0
+offset_bottom = 64.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect10" type="ColorRect" parent="." unique_id=1097287448]
+offset_left = 2495.0
+offset_top = -64.0
+offset_right = 2879.0
+offset_bottom = 64.0
+color = Color(0.14901961, 0.5176471, 0.14901961, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect11" type="ColorRect" parent="." unique_id=1381762137]
+offset_left = 840.0
+offset_top = -1024.0
+offset_right = 2696.0
+offset_bottom = -888.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect12" type="ColorRect" parent="." unique_id=605322177]
+offset_left = 2880.0
+offset_top = -128.0
+offset_right = 3200.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect13" type="ColorRect" parent="." unique_id=1211947329]
+offset_left = 3208.0
+offset_top = -384.0
+offset_right = 3336.0
+offset_bottom = -64.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect14" type="ColorRect" parent="." unique_id=960383800]
+offset_left = 3336.0
+offset_top = -384.0
+offset_right = 3912.0
+offset_bottom = -256.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect15" type="ColorRect" parent="." unique_id=838224379]
+offset_left = 3776.0
+offset_top = -776.0
+offset_right = 3904.0
+offset_bottom = -384.0
+color = Color(0, 0.64705884, 0.80784315, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect16" type="ColorRect" parent="." unique_id=1250590237]
+offset_left = 840.0
+offset_top = -1408.0
+offset_right = 968.0
+offset_bottom = -1024.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect17" type="ColorRect" parent="." unique_id=188330269]
+offset_left = 2888.0
+offset_top = -832.0
+offset_right = 3144.0
+offset_bottom = -768.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect18" type="ColorRect" parent="." unique_id=1516298719]
+offset_left = 3336.0
+offset_top = -896.0
+offset_right = 3912.0
+offset_bottom = -768.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect19" type="ColorRect" parent="." unique_id=971248177]
+offset_left = 3336.0
+offset_top = -1024.0
+offset_right = 3464.0
+offset_bottom = -896.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect20" type="ColorRect" parent="." unique_id=715373370]
+offset_left = 3336.0
+offset_top = -1088.0
+offset_right = 3976.0
+offset_bottom = -1024.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect21" type="ColorRect" parent="." unique_id=1900748909]
+offset_left = 840.0
+offset_top = -1536.0
+offset_right = 2376.0
+offset_bottom = -1408.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect22" type="ColorRect" parent="." unique_id=948985075]
+offset_left = 2376.0
+offset_top = -1536.0
+offset_right = 2704.0
+offset_bottom = -1408.0
+color = Color(0, 0.72156864, 0.99607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect23" type="ColorRect" parent="." unique_id=1919871345]
+offset_left = 2696.0
+offset_top = -1536.0
+offset_right = 3984.0
+offset_bottom = -1408.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="fangjian1" type="ColorRect" parent="." unique_id=629659144]
+offset_left = 3976.0
+offset_top = -1536.0
+offset_right = 4112.0
+offset_bottom = -1024.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect24" type="ColorRect" parent="." unique_id=1101352179]
+offset_left = 2240.0
+offset_top = 64.0
+offset_right = 2496.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="." unique_id=1374746026]
+offset_left = 2240.0
+offset_top = 184.0
+offset_right = 2368.0
+offset_bottom = 1472.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect26" type="ColorRect" parent="." unique_id=1968197444]
+offset_left = 2368.0
+offset_top = 1344.0
+offset_right = 3200.0
+offset_bottom = 1472.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect27" type="ColorRect" parent="." unique_id=230118368]
+offset_left = 2488.0
+offset_top = 704.0
+offset_right = 2752.0
+offset_bottom = 768.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect28" type="ColorRect" parent="." unique_id=136408215]
+offset_left = 2816.0
+offset_top = 960.0
+offset_right = 3008.0
+offset_bottom = 1024.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect29" type="ColorRect" parent="." unique_id=1659392404]
+offset_left = 3200.0
+offset_top = 1088.0
+offset_right = 3328.0
+offset_bottom = 1472.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect30" type="ColorRect" parent="." unique_id=552770990]
+offset_left = 2624.0
+offset_top = 384.0
+offset_right = 2816.0
+offset_bottom = 448.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect31" type="ColorRect" parent="." unique_id=1830535659]
+offset_left = 3328.0
+offset_top = 1088.0
+offset_right = 5056.0
+offset_bottom = 1216.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect32" type="ColorRect" parent="." unique_id=1191448687]
+offset_left = 2880.0
+offset_top = -64.0
+offset_right = 3008.0
+offset_bottom = 200.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect33" type="ColorRect" parent="." unique_id=992803996]
+offset_left = 2880.0
+offset_top = -8.0
+offset_right = 3208.0
+offset_bottom = 320.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect34" type="ColorRect" parent="." unique_id=2098127678]
+offset_left = 3200.0
+offset_top = -128.0
+offset_right = 3328.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect35" type="ColorRect" parent="." unique_id=927205931]
+offset_left = 3328.0
+offset_top = -272.0
+offset_right = 4096.0
+offset_bottom = 704.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect36" type="ColorRect" parent="." unique_id=1303809468]
+offset_left = 4288.0
+offset_top = 576.0
+offset_right = 4800.0
+offset_bottom = 704.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect37" type="ColorRect" parent="." unique_id=282542472]
+offset_left = 4928.0
+offset_top = 896.0
+offset_right = 5056.0
+offset_bottom = 1088.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect38" type="ColorRect" parent="." unique_id=2021930931]
+offset_left = 5056.0
+offset_top = 896.0
+offset_right = 5440.0
+offset_bottom = 1024.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect39" type="ColorRect" parent="." unique_id=1990727875]
+offset_left = 4088.0
+offset_top = -256.0
+offset_right = 4800.0
+offset_bottom = 576.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect40" type="ColorRect" parent="." unique_id=1601526270]
+offset_left = 3904.0
+offset_top = -384.0
+offset_right = 4800.0
+offset_bottom = -256.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect41" type="ColorRect" parent="." unique_id=317459417]
+offset_left = 5312.0
+offset_top = 512.0
+offset_right = 5440.0
+offset_bottom = 896.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect42" type="ColorRect" parent="." unique_id=1276273994]
+offset_left = 4800.0
+offset_top = 192.0
+offset_right = 5056.0
+offset_bottom = 256.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect43" type="ColorRect" parent="." unique_id=1026391556]
+offset_left = 5184.0
+offset_top = 512.0
+offset_right = 5696.0
+offset_bottom = 576.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect44" type="ColorRect" parent="." unique_id=1125150044]
+offset_left = 5312.0
+offset_top = -576.0
+offset_right = 5440.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect45" type="ColorRect" parent="." unique_id=2110256208]
+offset_left = 5440.0
+offset_top = 128.0
+offset_right = 5696.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect46" type="ColorRect" parent="." unique_id=1282281051]
+offset_left = 5696.0
+offset_top = 128.0
+offset_right = 5760.0
+offset_bottom = 576.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect47" type="ColorRect" parent="." unique_id=682935107]
+offset_left = 4992.0
+offset_top = -128.0
+offset_right = 5120.0
+offset_bottom = -64.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect48" type="ColorRect" parent="." unique_id=1615552785]
+offset_left = 4992.0
+offset_top = -640.0
+offset_right = 8704.0
+offset_bottom = -512.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect49" type="ColorRect" parent="." unique_id=950483666]
+offset_left = 5312.0
+offset_top = 192.0
+offset_right = 5384.0
+offset_bottom = 512.0
+color = Color(0.5904411, 0.59044117, 0.5904411, 1)
+
+[node name="ColorRect50" type="ColorRect" parent="." unique_id=641299358]
+offset_left = 5568.0
+offset_top = -896.0
+offset_right = 5696.0
+offset_bottom = -640.0
+color = Color(0, 0.7294118, 0, 1)
+
+[node name="ColorRect51" type="ColorRect" parent="." unique_id=835976690]
+offset_left = 3912.0
+offset_top = -896.0
+offset_right = 4672.0
+offset_bottom = -768.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect52" type="ColorRect" parent="." unique_id=1996812430]
+offset_left = 4672.0
+offset_top = -832.0
+offset_right = 4864.0
+offset_bottom = -768.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect53" type="ColorRect" parent="." unique_id=2052084638]
+offset_left = 5056.0
+offset_top = -1024.0
+offset_right = 6080.0
+offset_bottom = -896.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect54" type="ColorRect" parent="." unique_id=2061023880]
+offset_left = 4104.0
+offset_top = -1152.0
+offset_right = 4288.0
+offset_bottom = -888.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect55" type="ColorRect" parent="." unique_id=24172498]
+offset_left = 5056.0
+offset_top = -2112.0
+offset_right = 5184.0
+offset_bottom = -1024.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect56" type="ColorRect" parent="." unique_id=2083260970]
+offset_left = 3392.0
+offset_top = -2112.0
+offset_right = 5056.0
+offset_bottom = -1984.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect57" type="ColorRect" parent="." unique_id=1310558073]
+offset_left = 1728.0
+offset_top = -2237.0
+offset_right = 3520.0
+offset_bottom = -2109.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect58" type="ColorRect" parent="." unique_id=819048091]
+offset_left = 2112.0
+offset_top = -1728.0
+offset_right = 2240.0
+offset_bottom = -1536.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect59" type="ColorRect" parent="." unique_id=1880332101]
+offset_left = 192.0
+offset_top = -1856.0
+offset_right = 2112.0
+offset_bottom = -1536.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect60" type="ColorRect" parent="." unique_id=196458125]
+offset_left = 192.0
+offset_top = -2240.0
+offset_right = 1472.0
+offset_bottom = -2112.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect61" type="ColorRect" parent="." unique_id=1568762003]
+offset_left = 192.0
+offset_top = -2112.0
+offset_right = 320.0
+offset_bottom = -1856.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect62" type="ColorRect" parent="." unique_id=142356100]
+offset_left = 1088.0
+offset_top = -2816.0
+offset_right = 1216.0
+offset_bottom = -2496.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect63" type="ColorRect" parent="." unique_id=1512012662]
+offset_left = 1920.0
+offset_top = -2496.0
+offset_right = 2176.0
+offset_bottom = -2232.0
+color = Color(0, 0, 0, 1)
+
+[node name="fangjian2" type="ColorRect" parent="." unique_id=1324947496]
+offset_left = 1464.0
+offset_top = -2232.0
+offset_right = 1728.0
+offset_bottom = -2112.0
+color = Color(0, 0.8862745, 0.95686275, 1)
+
+[node name="ColorRect64" type="ColorRect" parent="." unique_id=824649522]
+offset_left = 1088.0
+offset_top = -2944.0
+offset_right = 5312.0
+offset_bottom = -2816.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect65" type="ColorRect" parent="." unique_id=641846245]
+offset_left = 832.0
+offset_top = -2624.0
+offset_right = 1088.0
+offset_bottom = -2496.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect66" type="ColorRect" parent="." unique_id=442457811]
+offset_left = -192.0
+offset_top = -2816.0
+offset_right = -64.0
+offset_bottom = -2240.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect67" type="ColorRect" parent="." unique_id=331755364]
+offset_left = -192.0
+offset_top = -2240.0
+offset_right = 192.0
+offset_bottom = -2112.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect68" type="ColorRect" parent="." unique_id=1665460227]
+offset_left = -192.0
+offset_top = -2944.0
+offset_right = 840.0
+offset_bottom = -2816.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect69" type="ColorRect" parent="." unique_id=2024420293]
+offset_left = 832.0
+offset_top = -2944.0
+offset_right = 960.0
+offset_bottom = -2560.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect70" type="ColorRect" parent="." unique_id=1863071664]
+offset_left = 256.0
+offset_top = -2368.0
+offset_right = 384.0
+offset_bottom = -2240.0
+color = Color(1, 0.20392157, 1, 1)
+
+[node name="ColorRect71" type="ColorRect" parent="." unique_id=1702549122]
+offset_left = 2112.0
+offset_top = -2560.0
+offset_right = 2688.0
+offset_bottom = -2232.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect72" type="ColorRect" parent="." unique_id=695795188]
+offset_left = 2688.0
+offset_top = -2432.0
+offset_right = 3648.0
+offset_bottom = -2112.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect73" type="ColorRect" parent="." unique_id=1769923687]
+offset_left = 3648.0
+offset_top = -2560.0
+offset_right = 4672.0
+offset_bottom = -2112.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect74" type="ColorRect" parent="." unique_id=2019162166]
+offset_left = 4648.0
+offset_top = -2304.0
+offset_right = 6272.0
+offset_bottom = -1984.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect74" unique_id=2017043241]
+layout_mode = 0
+offset_left = 1432.0
+offset_top = 320.0
+offset_right = 1624.0
+offset_bottom = 576.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect74/ColorRect" unique_id=363450088]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 512.0
+offset_right = 320.0
+offset_bottom = 576.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect74/ColorRect" unique_id=295189924]
+layout_mode = 0
+offset_left = -576.0
+offset_top = 384.0
+offset_right = -448.0
+offset_bottom = 512.0
+color = Color(1, 1, 0, 1)
+
+[node name="ColorRect75" type="ColorRect" parent="." unique_id=313886289]
+offset_left = 5312.0
+offset_top = -2944.0
+offset_right = 5760.0
+offset_bottom = -2560.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect75" unique_id=1752997847]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -128.0
+offset_right = 1984.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect75/ColorRect" unique_id=197568768]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 120.0
+offset_right = 1664.0
+offset_bottom = 328.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect75/ColorRect/ColorRect" unique_id=1342598969]
+layout_mode = 0
+offset_left = 576.0
+offset_top = -248.0
+offset_right = 2624.0
+offset_bottom = -112.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect76" type="ColorRect" parent="." unique_id=913407541]
+offset_left = 5184.0
+offset_top = -1472.0
+offset_right = 6272.0
+offset_bottom = -896.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect77" type="ColorRect" parent="." unique_id=740593077]
+offset_left = 6720.0
+offset_top = -2112.0
+offset_right = 9216.0
+offset_bottom = -1976.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect77" unique_id=707966923]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -128.0
+offset_right = 704.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect77" unique_id=1415324779]
+layout_mode = 0
+offset_left = 448.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = -128.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect77" unique_id=807577436]
+layout_mode = 0
+offset_left = 2496.0
+offset_top = -1088.0
+offset_right = 2624.0
+offset_bottom = 136.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect78" type="ColorRect" parent="." unique_id=1199831832]
+offset_left = 6720.0
+offset_top = -1344.0
+offset_right = 8704.0
+offset_bottom = -1216.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect78" unique_id=1865899716]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect78" unique_id=169241442]
+layout_mode = 0
+offset_left = 1920.0
+offset_top = 128.0
+offset_right = 1984.0
+offset_bottom = 712.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect78/ColorRect2" unique_id=504217522]
+layout_mode = 0
+offset_left = -616.0
+offset_top = 256.0
+offset_bottom = 320.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect79" type="ColorRect" parent="." unique_id=1071994292]
+offset_left = 6720.0
+offset_top = -1992.0
+offset_right = 6848.0
+offset_bottom = -1280.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect80" type="ColorRect" parent="." unique_id=248779190]
+offset_left = 6208.0
+offset_top = -2496.0
+offset_right = 6720.0
+offset_bottom = -2432.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect80" unique_id=1964961223]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 200.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect80" unique_id=1280056624]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 392.0
+offset_bottom = 328.0
