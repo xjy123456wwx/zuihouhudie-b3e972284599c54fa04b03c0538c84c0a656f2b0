@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://b7n3jgt857ay0"]
+
+[ext_resource type="Script" uid="uid://byhcwnr7ir0jj" path="res://scenes/menu.gd" id="1_8ln24"]
+[ext_resource type="Texture2D" uid="uid://c2tq2klxwtd1l" path="res://asset/ui/image 2.png" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://bime33qwa37ar" path="res://asset/ui/start.png" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://crtp71cpwsgq4" path="res://asset/ui/load.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://b4vbkgpvx32o8" path="res://asset/ui/load-1.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://coy06lwjneasm" path="res://asset/ui/load-2.png" id="4_oa1go"]
+
+[sub_resource type="Animation" id="Animation_rtw2f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oa1go"]
+resource_name = "hei"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.4001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tbmy8"]
+resource_name = "liang"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jk1qb"]
+_data = {
+&"RESET": SubResource("Animation_rtw2f"),
+&"hei": SubResource("Animation_oa1go"),
+&"liang": SubResource("Animation_tbmy8")
+}
+
+[node name="menu" type="Control" unique_id=1441426321]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1731.0
+offset_bottom = 970.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ln24")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2068032887]
+z_index = 999
+layout_mode = 0
+offset_right = 2883.0
+offset_bottom = 1641.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1247281646]
+root_node = NodePath("../ColorRect")
+libraries/ = SubResource("AnimationLibrary_jk1qb")
+movie_quit_on_finish = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1735989868]
+layout_mode = 0
+offset_right = 2880.0
+offset_bottom = 1620.0
+texture = ExtResource("1_ekxnf")
+
+[node name="start" type="Button" parent="." unique_id=1069707138]
+layout_mode = 0
+offset_left = 2228.0
+offset_top = 1050.0
+offset_right = 2649.0
+offset_bottom = 1159.0
+icon = ExtResource("1_wu84c")
+
+[node name="load" type="Button" parent="." unique_id=843369546]
+layout_mode = 0
+offset_left = 2228.0
+offset_top = 1163.0
+offset_right = 2649.0
+offset_bottom = 1272.0
+icon = ExtResource("2_8ln24")
+
+[node name="setting" type="Button" parent="." unique_id=1739282102]
+layout_mode = 0
+offset_left = 2228.0
+offset_top = 1276.0
+offset_right = 2649.0
+offset_bottom = 1385.0
+icon = ExtResource("3_rtw2f")
+
+[node name="exit" type="Button" parent="." unique_id=1075012912]
+layout_mode = 0
+offset_left = 2228.0
+offset_top = 1389.0
+offset_right = 2649.0
+offset_bottom = 1498.0
+icon = ExtResource("4_oa1go")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1846190608]
+position = Vector2(1442, 818)
+zoom = Vector2(0.4, 0.4)
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

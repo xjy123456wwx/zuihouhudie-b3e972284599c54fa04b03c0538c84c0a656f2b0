@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://pkbo5a2u4yx1"]
+
+[ext_resource type="Script" uid="uid://wswhanhluq86" path="res://zhujiemian.gd" id="1_0v7bf"]
+[ext_resource type="Texture2D" uid="uid://dynehirylepfb" path="res://asset/ui/zhujiemian/背景.png" id="1_cews2"]
+[ext_resource type="Texture2D" uid="uid://c2yuio53udnj4" path="res://asset/ui/zhujiemian/桌子.png" id="2_1nkfl"]
+[ext_resource type="Texture2D" uid="uid://u3qe8a05in55" path="res://asset/ui/zhujiemian/用户.png" id="3_ankgj"]
+[ext_resource type="Texture2D" uid="uid://yxctcstymrfq" path="res://asset/ui/zhujiemian/金币+精力.png" id="4_h07or"]
+[ext_resource type="Texture2D" uid="uid://dh5ca2jdkmrjn" path="res://asset/ui/zhujiemian/Group 111.png" id="5_j02ld"]
+[ext_resource type="Texture2D" uid="uid://c4w62hi1hlfdv" path="res://asset/ui/zhujiemian/任务.png" id="6_k61mh"]
+[ext_resource type="Texture2D" uid="uid://c4aqm45xcf3qq" path="res://asset/ui/zhujiemian/出发按钮.png" id="7_nla2x"]
+[ext_resource type="Texture2D" uid="uid://dkxlsqamqpg5f" path="res://asset/ui/zhujiemian/商店.png" id="8_0v7bf"]
+[ext_resource type="Texture2D" uid="uid://dfeaoqeppfonr" path="res://asset/ui/zhujiemian/好友.png" id="9_oo2en"]
+[ext_resource type="Texture2D" uid="uid://c4b7vdvjlmdxp" path="res://asset/ui/zhujiemian/展馆.png" id="10_lxdw2"]
+[ext_resource type="Texture2D" uid="uid://bcdv8qss3agvr" path="res://asset/ui/zhujiemian/生态缸.png" id="11_nla2x"]
+[ext_resource type="Texture2D" uid="uid://dx3myimliio2u" path="res://asset/ui/zhujiemian/背包.png" id="12_0v7bf"]
+[ext_resource type="Texture2D" uid="uid://coweo254ien0o" path="res://asset/ui/zhujiemian/设置.png" id="13_oo2en"]
+[ext_resource type="Texture2D" uid="uid://cn5m7d0p0aihc" path="res://asset/ui/zhujiemian/邮箱.png" id="14_lxdw2"]
+
+[sub_resource type="Animation" id="Animation_0v7bf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mask_go:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oo2en"]
+resource_name = "liang"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mask_go:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lxdw2"]
+_data = {
+&"RESET": SubResource("Animation_0v7bf"),
+&"liang": SubResource("Animation_oo2en")
+}
+
+[sub_resource type="Animation" id="Animation_rtw2f"]
+length = 0.033333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oa1go"]
+resource_name = "hei"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.4001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tbmy8"]
+resource_name = "liang"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0v7bf"]
+_data = {
+&"RESET": SubResource("Animation_rtw2f"),
+&"hei": SubResource("Animation_oa1go"),
+&"liang": SubResource("Animation_tbmy8")
+}
+
+[node name="Control" type="Control" unique_id=403226602]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1724.4443
+offset_bottom = 970.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0v7bf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=540932032]
+libraries/ = SubResource("AnimationLibrary_lxdw2")
+
+[node name="mask_go" type="ColorRect" parent="." unique_id=2009045826]
+z_index = 999
+layout_mode = 0
+offset_right = 2883.0
+offset_bottom = 1641.0
+color = Color(0, 0, 0, 1)
+
+[node name="anim_go" type="AnimationPlayer" parent="." unique_id=1646218806]
+root_node = NodePath("../mask_go")
+libraries/ = SubResource("AnimationLibrary_0v7bf")
+movie_quit_on_finish = true
+
+[node name="beijing" type="TextureRect" parent="." unique_id=2003804262]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cews2")
+
+[node name="zhuozi" type="TextureRect" parent="." unique_id=1596910834]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 2.0
+offset_right = 2859.0
+offset_bottom = 1622.0
+texture = ExtResource("2_1nkfl")
+
+[node name="yonghu" type="TextureRect" parent="." unique_id=89478811]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_ankgj")
+
+[node name="jinbi" type="TextureRect" parent="." unique_id=578768667]
+layout_mode = 0
+offset_left = 1559.0
+offset_top = 70.0
+offset_right = 2802.0
+offset_bottom = 193.0
+texture = ExtResource("4_h07or")
+
+[node name="ditu-" type="Button" parent="." unique_id=728024780]
+layout_mode = 0
+offset_left = 1205.0
+offset_top = 809.0
+offset_right = 2323.0
+offset_bottom = 926.0
+icon = ExtResource("5_j02ld")
+flat = true
+
+[node name="renwu" type="Button" parent="." unique_id=175423371]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 878.0
+offset_right = 295.0
+offset_bottom = 1099.0
+icon = ExtResource("6_k61mh")
+flat = true
+
+[node name="go" type="Button" parent="." unique_id=1401115603]
+layout_mode = 0
+offset_left = 1577.0
+offset_top = 1066.0
+offset_right = 1955.0
+offset_bottom = 1364.0
+icon = ExtResource("7_nla2x")
+flat = true
+
+[node name="shop" type="Button" parent="." unique_id=1991923768]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 1031.0
+offset_right = 363.0
+offset_bottom = 1350.0
+icon = ExtResource("8_0v7bf")
+flat = true
+
+[node name="friend" type="Button" parent="." unique_id=271836211]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 404.0
+offset_right = 294.0
+offset_bottom = 626.0
+icon = ExtResource("9_oo2en")
+flat = true
+
+[node name="zhanguan" type="Button" parent="." unique_id=1922815771]
+layout_mode = 0
+offset_left = 2592.0
+offset_top = 978.0
+offset_right = 2774.0
+offset_bottom = 1207.0
+icon = ExtResource("10_lxdw2")
+flat = true
+
+[node name="shengtaigang" type="Button" parent="." unique_id=852525460]
+layout_mode = 0
+offset_left = 2587.0
+offset_top = 735.0
+offset_right = 2769.0
+offset_bottom = 961.0
+icon = ExtResource("11_nla2x")
+flat = true
+
+[node name="bag" type="Button" parent="." unique_id=78062516]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 632.0
+offset_right = 292.0
+offset_bottom = 857.0
+icon = ExtResource("12_0v7bf")
+flat = true
+
+[node name="shezhi" type="Button" parent="." unique_id=233801495]
+layout_mode = 0
+offset_left = 2630.0
+offset_top = 415.0
+offset_right = 2735.0
+offset_bottom = 521.0
+icon = ExtResource("13_oo2en")
+flat = true
+
+[node name="Button" type="Button" parent="." unique_id=73620642]
+layout_mode = 0
+offset_left = 2626.0
+offset_top = 551.0
+offset_right = 2731.0
+offset_bottom = 628.0
+icon = ExtResource("14_lxdw2")
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=175758529]
+position = Vector2(1442, 818)
+zoom = Vector2(0.4, 0.4)
+
+[connection signal="pressed" from="ditu-" to="." method="_on_ditu_pressed"]
+[connection signal="pressed" from="renwu" to="." method="_on_renwu_pressed"]
+[connection signal="pressed" from="go" to="." method="_on_go_pressed"]
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="friend" to="." method="_on_friend_pressed"]
+[connection signal="pressed" from="zhanguan" to="." method="_on_zhanguan_pressed"]
+[connection signal="pressed" from="shengtaigang" to="." method="_on_shengtaigang_pressed"]
+[connection signal="pressed" from="bag" to="." method="_on_bag_pressed"]
