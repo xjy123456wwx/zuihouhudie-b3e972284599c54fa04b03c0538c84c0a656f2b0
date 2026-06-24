@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://crup4ihibp6w6"]
 
+[ext_resource type="Script" uid="uid://dhd1tsupojl4l" path="res://enemy-move.gd" id="1_5gk8f"]
 [ext_resource type="Texture2D" uid="uid://cwumhldkbudko" path="res://693f9406462fceba210f0cfcc8a0908f.png" id="1_rokp8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d7rqd"]
@@ -47,7 +48,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6x271")
 }],
-"loop": false,
+"loop": true,
 "name": &"qingwatiao",
 "speed": 9.0
 }]
@@ -58,12 +59,16 @@ height = 1548.2776
 
 [node name="Area2D" type="Area2D" unique_id=1890073884]
 collision_layer = 2
+collision_mask = 33
+script = ExtResource("1_5gk8f")
+speed = 200.0
+move_distance = 500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=347047565]
 sprite_frames = SubResource("SpriteFrames_kp7xt")
 animation = &"qingwatiao"
-frame = 5
-frame_progress = 1.0
+autoplay = "qingwatiao"
+frame_progress = 0.3693161
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1671705819]
 position = Vector2(108.99999, 391)

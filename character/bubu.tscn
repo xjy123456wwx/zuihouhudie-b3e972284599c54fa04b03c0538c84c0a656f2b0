@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bsvp3y0xmfc52"]
 
 [ext_resource type="Texture2D" uid="uid://cciymb6febvgs" path="res://assert/30ac25e15e518ded47a6d5444cd5322c.png" id="1_2kscm"]
+[ext_resource type="Script" uid="uid://dvljtea74g1av" path="res://enemy-yuandi-gongji.gd" id="1_5gknh"]
 [ext_resource type="Texture2D" uid="uid://b7i7bjvjsli54" path="res://assert/e1c9cee01595e40d0b6ec2423ca524f0.png" id="2_0qxph"]
 [ext_resource type="PackedScene" uid="uid://bifitddetoqf6" path="res://componet/hurt_decect.tscn" id="4_qjmpm"]
 
@@ -137,8 +138,29 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4jpu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2lme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeo6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtuv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7op4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8il3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhcje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbtqd")
 }],
-"loop": true,
+"loop": false,
 "name": &"gongji",
 "speed": 5.0
 }]
@@ -151,11 +173,13 @@ radius = 238.90166
 
 [node name="Area2D" type="Area2D" unique_id=239057982 groups=["enemy"]]
 collision_layer = 2
+script = ExtResource("1_5gknh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1908511089]
 sprite_frames = SubResource("SpriteFrames_dgypq")
 animation = &"gongji"
-frame_progress = 0.73783374
+frame = 14
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494879067]
 position = Vector2(-45, -242)

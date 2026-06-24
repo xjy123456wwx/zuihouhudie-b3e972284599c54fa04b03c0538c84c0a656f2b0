@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://suq6t1qrr4p"]
 
 [ext_resource type="Texture2D" uid="uid://bry3bregm3q7n" path="res://assert/724a01af03629d576fced30abba87b80.png" id="1_as4px"]
-[ext_resource type="Script" uid="uid://dhd1tsupojl4l" path="res://enemy-move.gd" id="1_gypdp"]
+[ext_resource type="Script" uid="uid://cadx2kux67wra" path="res://enemy-gongji.gd" id="1_gypdp"]
 [ext_resource type="Texture2D" uid="uid://bv4orm5hyolou" path="res://asset/images/d61d33acc67b138284a57d79f4e3cc31.png" id="1_u864s"]
 [ext_resource type="Texture2D" uid="uid://c60eapd3e33es" path="res://assert/2b40aaaca6a5ebc0087f817b8c4516c4.png" id="2_ckqgr"]
 [ext_resource type="Texture2D" uid="uid://4p3vnxys2wv6" path="res://asset/images/8fe37c63f09b6c97acb7056a54df75f5.png" id="2_mwgf7"]
@@ -183,10 +183,10 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pcbby")
 }, {
-"duration": 1.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_cp05l")
 }],
-"loop": false,
+"loop": true,
 "name": &"gongji",
 "speed": 9.0
 }, {
@@ -252,15 +252,14 @@ height = 942.6377
 
 [node name="Area2D" type="Area2D" unique_id=650166426 groups=["enemy"]]
 collision_layer = 2
+collision_mask = 33
 script = ExtResource("1_gypdp")
-speed = 100.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1748015167]
 sprite_frames = SubResource("SpriteFrames_nrxuj")
-animation = &"daji"
-autoplay = "zoulu"
+animation = &"gongji"
 frame = 7
-frame_progress = 1.0
+frame_progress = 0.32018495
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=829417880]
 position = Vector2(-31, 5.000001)

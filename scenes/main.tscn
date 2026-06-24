@@ -5,12 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://dbaar27i6ont" path="res://character/lulu.tscn" id="3_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://bsvp3y0xmfc52" path="res://character/bubu.tscn" id="4_trceg"]
 [ext_resource type="PackedScene" uid="uid://hhp6l11wweud" path="res://character/chongzi.tscn" id="5_a8y0u"]
+[ext_resource type="Script" uid="uid://cadx2kux67wra" path="res://enemy-gongji.gd" id="5_trceg"]
 [ext_resource type="PackedScene" uid="uid://dk57byvw7c0n2" path="res://character/huashu.tscn" id="6_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://crup4ihibp6w6" path="res://character/qingwa.tscn" id="7_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://jsju828xnb2d" path="res://character/qiuyu.tscn" id="8_muem4"]
 [ext_resource type="PackedScene" uid="uid://ch753ojekcav" path="res://characters/area_2d.tscn" id="9_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://suq6t1qrr4p" path="res://character/xiyi.tscn" id="10_0ld40"]
 [ext_resource type="PackedScene" uid="uid://j0eqh8ij2kv5" path="res://character/yazi.tscn" id="11_gqmmt"]
+[ext_resource type="Script" uid="uid://dvljtea74g1av" path="res://enemy-yuandi-gongji.gd" id="12_trceg"]
 [ext_resource type="PackedScene" uid="uid://cjkvfypfd77vu" path="res://liuchengyu/yujinxiang.tscn" id="12_yc10j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
@@ -20,7 +22,6 @@ size = Vector2(5031, 505.91846)
 
 [node name="player" parent="." unique_id=729994827 instance=ExtResource("1_o5qli")]
 position = Vector2(382, 385)
-collision_mask = 34
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2049164651]
 collision_layer = 32
@@ -36,53 +37,61 @@ position = Vector2(-622, 424.00003)
 scale = Vector2(3.4747758, 0.12405062)
 texture = ExtResource("2_0wfyh")
 
-[node name="lu" parent="." unique_id=960926264 instance=ExtResource("3_eb6dy")]
+[node name="lu" parent="." unique_id=960926264 node_paths=PackedStringArray("player") instance=ExtResource("3_eb6dy")]
 position = Vector2(-773, -118)
+player = NodePath("../player")
 
-[node name="bubu" parent="." unique_id=239057982 instance=ExtResource("4_trceg")]
+[node name="bubu" parent="." unique_id=239057982 node_paths=PackedStringArray("player") instance=ExtResource("4_trceg")]
 position = Vector2(-251, 339)
 scale = Vector2(0.5, 0.5)
+player = NodePath("../player")
 
-[node name="chongzi" parent="." unique_id=585432611 instance=ExtResource("5_a8y0u")]
+[node name="chongzi" parent="." unique_id=585432611 node_paths=PackedStringArray("player") instance=ExtResource("5_a8y0u")]
 position = Vector2(-227, -120)
 collision_mask = 1
-
-[node name="huashu" parent="." unique_id=418282317 instance=ExtResource("6_jkv2x")]
-position = Vector2(1624, -224)
-collision_layer = 3
-collision_mask = 3
+player = NodePath("../player")
 
 [node name="qingwa" parent="." unique_id=1890073884 groups=["enemy"] instance=ExtResource("7_jbj1t")]
 position = Vector2(-2026.9999, -494)
 scale = Vector2(0.8, 0.8)
 collision_layer = 3
 collision_mask = 3
+speed = 80.0
+move_distance = 200.0
 
-[node name="qiuyu" parent="." unique_id=1234697558 instance=ExtResource("8_muem4")]
+[node name="qiuyu" parent="." unique_id=1234697558 node_paths=PackedStringArray("player") instance=ExtResource("8_muem4")]
 position = Vector2(1060, 179)
-collision_layer = 3
-collision_mask = 3
+collision_mask = 33
+script = ExtResource("5_trceg")
+move_speed = 60.0
+patrol_range = 250.0
+chase_speed = 120.0
+player = NodePath("../player")
 
 [node name="wawa" parent="." unique_id=2103596240 groups=["enemy"] instance=ExtResource("9_dp3eg")]
 position = Vector2(717, 170)
 collision_layer = 3
 collision_mask = 3
 
-[node name="xiyi" parent="." unique_id=650166426 instance=ExtResource("10_0ld40")]
+[node name="xiyi" parent="." unique_id=650166426 node_paths=PackedStringArray("player") instance=ExtResource("10_0ld40")]
 position = Vector2(-2751, -61)
-collision_layer = 3
-collision_mask = 3
+player = NodePath("../player")
 
-[node name="yazi" parent="." unique_id=475050778 instance=ExtResource("11_gqmmt")]
+[node name="yazi" parent="." unique_id=475050778 node_paths=PackedStringArray("player") instance=ExtResource("11_gqmmt")]
 position = Vector2(-1281, 190)
-collision_layer = 3
-collision_mask = 3
+player = NodePath("../player")
 
-[node name="yujinxiang" parent="." unique_id=1620159645 groups=["enemy"] instance=ExtResource("12_yc10j")]
+[node name="yujinxiang" parent="." unique_id=1620159645 node_paths=PackedStringArray("player") groups=["enemy"] instance=ExtResource("12_yc10j")]
 position = Vector2(-1586, 232)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 33
+script = ExtResource("12_trceg")
+player = NodePath("../player")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=149161359]
 position = Vector2(-524, -48)
 zoom = Vector2(0.2, 0.2)
+
+[node name="huashu" parent="." unique_id=418282317 node_paths=PackedStringArray("player") instance=ExtResource("6_jkv2x")]
+position = Vector2(1652, -48)
+player = NodePath("../player")

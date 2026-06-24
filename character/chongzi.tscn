@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hhp6l11wweud"]
 
 [ext_resource type="Texture2D" uid="uid://cmuxckji1f8ac" path="res://338f8f43f5674df2bffabf249ed02ad2.png" id="1_j1j56"]
-[ext_resource type="Script" uid="uid://dhd1tsupojl4l" path="res://enemy-move.gd" id="1_lcv03"]
+[ext_resource type="Script" uid="uid://cadx2kux67wra" path="res://enemy-gongji.gd" id="1_lcv03"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixe1f"]
 atlas = ExtResource("1_j1j56")
@@ -82,8 +82,7 @@ script = ExtResource("1_lcv03")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813368016]
 sprite_frames = SubResource("SpriteFrames_f78jd")
-animation = &"gongji"
-autoplay = "daiji"
+animation = &"daiji"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1511512169]

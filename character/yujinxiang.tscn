@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjkvfypfd77vu"]
 
-[ext_resource type="Texture2D" uid="uid://ljwdavkxnn6c" path="res://2dadebbd569405fca52b43f1157a28a8.png" id="1_tn2ao"]
+[ext_resource type="Script" uid="uid://dvljtea74g1av" path="res://enemy-yuandi-gongji.gd" id="1_2bjpi"]
+[ext_resource type="Texture2D" uid="uid://cnfnablcbqwn5" path="res://2dadebbd569405fca52b43f1157a28a8.png" id="1_tn2ao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_okvh7"]
 atlas = ExtResource("1_tn2ao")
@@ -98,11 +99,12 @@ animations = [{
 radius = 68.0
 
 [node name="Area2D" type="Area2D" unique_id=1620159645]
+script = ExtResource("1_2bjpi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87825389]
 sprite_frames = SubResource("SpriteFrames_btixc")
-animation = &"siwang"
-frame_progress = 0.52762115
+animation = &"gongji"
+frame_progress = 0.37776434
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1621878570]
 position = Vector2(0, 27)

@@ -1,31 +1,8 @@
 [gd_scene format=3 uid="uid://j0eqh8ij2kv5"]
 
 [ext_resource type="Texture2D" uid="uid://b1pwhm71yj3ks" path="res://489df70d8d416748e03083ca1075a7ed.png" id="1_ljh14"]
-[ext_resource type="Texture2D" uid="uid://cw5dvs712ruhe" path="res://texiao/114ab6df5141e050e7bb947ba387b91d.png" id="1_qgtsd"]
-[ext_resource type="Script" uid="uid://dhd1tsupojl4l" path="res://enemy-move.gd" id="3_varjr"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_varjr"]
-blend_mode = 1
-particles_animation = true
-particles_anim_h_frames = 7
-particles_anim_v_frames = 2
-particles_anim_loop = false
-
-[sub_resource type="Gradient" id="Gradient_xrv5c"]
-offsets = PackedFloat32Array(0.03220339, 1)
-colors = PackedColorArray(0.056398593, 0.13453263, 0.07662486, 0.58431375, 0.11689881, 0.114970766, 0.056412756, 0.78039217)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_qgtsd"]
-gradient = SubResource("Gradient_xrv5c")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l1n4d"]
-particle_flag_disable_z = true
-angle_min = 180.00002
-angle_max = 180.00002
-spread = 17.034
-gravity = Vector3(0, 98, 0)
-scale_max = 1.5
-color_ramp = SubResource("GradientTexture1D_qgtsd")
+[ext_resource type="Script" uid="uid://bini4g3etjas3" path="res://fashe-zidan.gd" id="1_qgtsd"]
+[ext_resource type="PackedScene" uid="uid://c3bxbsc0fhmv" path="res://character/zidan.tscn" id="2_varjr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6sdb"]
 atlas = ExtResource("1_ljh14")
@@ -62,19 +39,8 @@ height = 348.0
 
 [node name="Area2D" type="Area2D" unique_id=475050778 groups=["enemy"]]
 collision_layer = 2
-script = ExtResource("3_varjr")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=211588990]
-material = SubResource("CanvasItemMaterial_varjr")
-position = Vector2(-39.999996, -35)
-scale = Vector2(0.77, 0.77)
-amount = 26
-texture = ExtResource("1_qgtsd")
-lifetime = 2.0
-speed_scale = 2.28
-explosiveness = 0.18
-randomness = 0.67
-process_material = SubResource("ParticleProcessMaterial_l1n4d")
+script = ExtResource("1_qgtsd")
+bullet_prefab = ExtResource("2_varjr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1709064328]
 position = Vector2(3, -72)
@@ -86,3 +52,7 @@ frame_progress = 0.13000175
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1371050782]
 position = Vector2(-8, 9)
 shape = SubResource("CapsuleShape2D_gd3gx")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2058032216]
+position = Vector2(116, -94)
+gizmo_extents = 100.0

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c3bxbsc0fhmv"]
+
+[ext_resource type="Script" uid="uid://ceickh04ixggy" path="res://zidan.gd" id="1_jaccb"]
+[ext_resource type="Texture2D" uid="uid://b3hqmo3j50fgi" path="res://asset/images/94afb181b312b30dbcbbe94f25d0c508.png" id="1_qxj1x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jaccb"]
+radius = 24.020824
+
+[node name="Area2D" type="Area2D" unique_id=1065428397]
+collision_layer = 2
+script = ExtResource("1_jaccb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=289767633]
+position = Vector2(17, 0)
+texture = ExtResource("1_qxj1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1624548978]
+shape = SubResource("CircleShape2D_jaccb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

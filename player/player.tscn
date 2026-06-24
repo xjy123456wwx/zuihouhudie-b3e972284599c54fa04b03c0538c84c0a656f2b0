@@ -242,7 +242,8 @@ height = 486.0
 radius = 168.0
 height = 496.0
 
-[node name="player" type="CharacterBody2D" unique_id=1176976964]
+[node name="player" type="CharacterBody2D" unique_id=1176976964 groups=["player"]]
+collision_mask = 46
 script = ExtResource("1_rkbax")
 
 [node name="walkAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=895206769]

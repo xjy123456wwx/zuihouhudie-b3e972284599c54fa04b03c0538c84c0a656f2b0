@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jsju828xnb2d"]
 
 [ext_resource type="Texture2D" uid="uid://by2jvwj2sj3gy" path="res://assert/c490005d531eed7ff5b3876a52f17345.png" id="1_k3a21"]
-[ext_resource type="Script" uid="uid://dhd1tsupojl4l" path="res://enemy-move.gd" id="1_xks2d"]
+[ext_resource type="Script" uid="uid://dvljtea74g1av" path="res://enemy-yuandi-gongji.gd" id="1_xks2d"]
 [ext_resource type="Texture2D" uid="uid://hli2107x34df" path="res://assert/5eab16c3f62c4855f7578bccc24bfb4b.png" id="2_ryilo"]
 [ext_resource type="Texture2D" uid="uid://cechrplo572k6" path="res://asset/images/a5d666616f4c9861a9b978fde1e87d81.png" id="3_icrpd"]
 
@@ -147,7 +147,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_4tqxh")
 }],
 "loop": true,
-"name": &"gun",
+"name": &"gongji",
 "speed": 8.0
 }, {
 "frames": [{
@@ -187,9 +187,9 @@ script = ExtResource("1_xks2d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1443979505]
 sprite_frames = SubResource("SpriteFrames_smmge")
-animation = &"gun"
-autoplay = "gun"
-frame_progress = 0.23041695
+animation = &"siwang"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1929504663]
 position = Vector2(-15, 68)
