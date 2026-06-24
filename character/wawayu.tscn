@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c53j6fbnrowy6"]
 
-[ext_resource type="Texture2D" path="res://4e090a2d1f2b3c12e52f2dd7de8d4e91.png" id="1_8vrm3"]
-[ext_resource type="Texture2D" path="res://57434409d69f54009d39061be6586233.png" id="1_wps6p"]
-[ext_resource type="Texture2D" path="res://8895ceaf9d1b46b747fa0af0608706af.png" id="2_7k3g2"]
+[ext_resource type="Texture2D" uid="uid://doxbbetj04gcp" path="res://4e090a2d1f2b3c12e52f2dd7de8d4e91.png" id="1_8vrm3"]
+[ext_resource type="Texture2D" uid="uid://gaad8ubun43d" path="res://57434409d69f54009d39061be6586233.png" id="1_wps6p"]
+[ext_resource type="Texture2D" uid="uid://cntn74aamxfvn" path="res://8895ceaf9d1b46b747fa0af0608706af.png" id="2_7k3g2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h67r3"]
 atlas = ExtResource("1_wps6p")
