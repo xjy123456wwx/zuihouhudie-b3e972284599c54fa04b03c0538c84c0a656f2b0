@@ -9,11 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dk57byvw7c0n2" path="res://character/huashu.tscn" id="6_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://crup4ihibp6w6" path="res://character/qingwa.tscn" id="7_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://jsju828xnb2d" path="res://character/qiuyu.tscn" id="8_muem4"]
-[ext_resource type="PackedScene" uid="uid://ch753ojekcav" path="res://characters/area_2d.tscn" id="9_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://suq6t1qrr4p" path="res://character/xiyi.tscn" id="10_0ld40"]
 [ext_resource type="PackedScene" uid="uid://j0eqh8ij2kv5" path="res://character/yazi.tscn" id="11_gqmmt"]
-[ext_resource type="Script" uid="uid://dvljtea74g1av" path="res://enemy-yuandi-gongji.gd" id="12_trceg"]
-[ext_resource type="PackedScene" uid="uid://cjkvfypfd77vu" path="res://liuchengyu/yujinxiang.tscn" id="12_yc10j"]
+[ext_resource type="PackedScene" uid="uid://cjkvfypfd77vu" path="res://character/yujinxiang.tscn" id="12_yc10j"]
+[ext_resource type="PackedScene" uid="uid://c53j6fbnrowy6" path="res://character/wawayu.tscn" id="13_trceg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(5031, 505.91846)
@@ -68,11 +67,6 @@ patrol_range = 250.0
 chase_speed = 120.0
 player = NodePath("../player")
 
-[node name="wawa" parent="." unique_id=2103596240 groups=["enemy"] instance=ExtResource("9_dp3eg")]
-position = Vector2(717, 170)
-collision_layer = 3
-collision_mask = 3
-
 [node name="xiyi" parent="." unique_id=650166426 node_paths=PackedStringArray("player") instance=ExtResource("10_0ld40")]
 position = Vector2(-2751, -61)
 player = NodePath("../player")
@@ -85,7 +79,6 @@ player = NodePath("../player")
 position = Vector2(-1586, 232)
 collision_layer = 2
 collision_mask = 33
-script = ExtResource("12_trceg")
 player = NodePath("../player")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=149161359]
@@ -95,3 +88,5 @@ zoom = Vector2(0.2, 0.2)
 [node name="huashu" parent="." unique_id=418282317 node_paths=PackedStringArray("player") instance=ExtResource("6_jkv2x")]
 position = Vector2(1652, -48)
 player = NodePath("../player")
+
+[node name="wawa" parent="." unique_id=2103596240 instance=ExtResource("13_trceg")]

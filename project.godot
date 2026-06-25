@@ -31,6 +31,9 @@ directories/dtl_directory={
 "main": "res://addons/dialogic/timeline/main.dtl"
 }
 layout/style_directory={}
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="Default"
 
 [editor_plugins]
 

@@ -28,3 +28,27 @@ func _process(delta):
 	if abs(direction) > 0:
 		if sprite.animation != "zoulu":
 			sprite.play("zoulu")
+			
+var hp = 80
+var is_dead = false
+
+# 被攻击触发变色+扣血
+func take_damage(dmg):
+	if is_dead:
+		return
+	
+	# 怪物变绿
+	$AnimatedSprite2D.modulate = Color.GREEN
+	hp -= dmg
+	await get_tree().create_timer(0.2)
+	$AnimatedSprite2D.modulate = Color.WHITE
+
+	# 血量为0执行死亡
+	if hp <= 0:
+		die()
+
+func die():
+	is_dead = true
+	$AnimatedSprite2D.play("siwang")
+	await $AnimatedSprite2D.animation_finished
+	queue_free()

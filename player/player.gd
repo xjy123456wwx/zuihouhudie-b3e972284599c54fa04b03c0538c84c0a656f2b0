@@ -1,155 +1,147 @@
 extends CharacterBody2D
 
-const gravity = 2000
+var born_pos:Vector2
 
+const gravity = 2000
 const speed_walk = 800
 const speed_run = 1550
 const jump_force = 1800
 
+var hp = 100
+var max_hp = 100
+var is_attacking = false
+var is_dead = false
 
 var max_jumps = 2
 var jumps_remaining = max_jumps
 
-@onready var walk_anim = $walkAnimatedSprite2D
-@onready var jump_anim = $jumpAnimatedSprite2D
-@onready var run_anim = $runAnimatedSprite2D
-@onready var buzhuo_anim = $buzhuoAnimatedSprite2D
+@onready var anim = $AnimatedSprite2D
+@onready var hitbox = $HitBox
+var attack_has_hit = false
 
 var jump_trigger = false
 var is_buzhuo = false
 
 var health = 100
 var can_hurt = true
-
 var is_in_emeny : bool = false
 
+
 func _ready():
-	# 开局直接把捕捉动画隐藏，避免叠在身上
-	buzhuo_anim.visible = false
+	born_pos = global_position
+	hitbox.monitoring = false
 
 func _physics_process(delta):
-	# 重力
+	if is_dead:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	
+	if is_attacking or is_buzhuo:
+		velocity.x = 0
+		move_and_slide()
+		return
+
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
 		velocity.y = 0
 		jumps_remaining = max_jumps
 
-	# 方向
 	var direction = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	
-	# 移动速度
 	if Input.is_action_pressed("run"):
 		velocity.x = direction * speed_run
 	else:
 		velocity.x = direction * speed_walk
 
-	# 跳跃
 	if jump_trigger:
 		jump_trigger = false
 		velocity.y = -jump_force
 		jumps_remaining -= 1
 
-	# 左右翻转
 	if direction != 0:
-		walk_anim.scale.x = -1 if direction < 0 else 1
-		jump_anim.scale.x = -1 if direction < 0 else 1
-		run_anim.scale.x = -1 if direction < 0 else 1
-		buzhuo_anim.scale.x = -1 if direction < 0 else 1
+		anim.flip_h = direction < 0
 
-	# 只在地面、不在捕捉状态时，按右键触发捕捉
-	if Input.is_action_just_pressed("buzhuo") and not is_buzhuo and is_on_floor():
+	# Z键捕捉，把解锁改成计时器，不再依赖动画状态
+	if Input.is_action_just_pressed("buzhuo") and not is_buzhuo and not is_attacking and is_on_floor():
 		is_buzhuo = true
-		velocity.x = 0
-
-		walk_anim.visible = false
-		run_anim.visible = false
-		jump_anim.visible = false
-
-		buzhuo_anim.visible = true
-		buzhuo_anim.play("buzhuo")
-
-	# 捕捉动画播完自动结束、隐藏
-	if is_buzhuo and not buzhuo_anim.is_playing():
+		anim.play("buzhuo")
+		# 等待0.4秒自动解除锁定，和动画时长匹配
+		await get_tree().create_timer(0.4).timeout
 		is_buzhuo = false
-		buzhuo_anim.visible = false
 
-	# 非捕捉状态才走正常动画逻辑
-	if not is_buzhuo:
+	# 空闲动画
+	if not is_buzhuo and not is_attacking:
 		if not is_on_floor():
-			jump_anim.visible = true
-			walk_anim.visible = false
-			run_anim.visible = false
-			jump_anim.play("jump")
+			anim.play("jump")
 		elif direction != 0:
-			if Input.is_action_pressed("run"):
-				run_anim.visible = true
-				walk_anim.visible = false
-				jump_anim.visible = false
-				run_anim.play("run")
-			else:
-				walk_anim.visible = true
-				run_anim.visible = false
-				jump_anim.visible = false
-				walk_anim.play("walk")
+			anim.play("walk")
 		else:
-			walk_anim.visible = true
-			run_anim.visible = false
-			jump_anim.visible = false
-			walk_anim.stop()
+			anim.stop()
 
 	move_and_slide()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("jump") and jumps_remaining > 0 and not is_buzhuo:
+	if is_dead:
+		return
+	
+	if Input.is_action_just_pressed("jump") and jumps_remaining > 0 and not is_buzhuo and not is_attacking:
 		jump_trigger = true
+
+	# 右键攻击（保持原样，正常连续释放）
+	if Input.is_action_just_pressed("gongji") and not is_attacking and not is_buzhuo and is_on_floor():
+		is_attacking = true
+		attack_has_hit = false
+		anim.play("gongji")
+		hitbox.monitoring = true
+		
+		await anim.animation_finished
+		hitbox.monitoring = false
+		is_attacking = false
+
 	if can_hurt and is_in_emeny:
 		health -= 10
-		print("【强制受伤】已扣血")
 		hurt_flash()
 		can_hurt = false
 		await get_tree().create_timer(1.0).timeout
 		can_hurt = true
 
+	if health <= 0 and not is_dead:
+		die()
 
-# 角色受伤闪红
+func die():
+	is_dead = true
+	anim.play("siwang")
+	await get_tree().create_timer(1.0).timeout
+	global_position = born_pos
+	health = 100
+	can_hurt = true
+	is_dead = false
+
+func _on_hitbox_body_entered(body):
+	if attack_has_hit:
+		return
+	if body.is_in_group("enemy"):
+		attack_has_hit = true
+		if body.has_method("take_damage"):
+			body.take_damage(25)
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	is_in_emeny = true
 
 func _on_hurt_box_area_exited(area: Area2D) -> void:
-	is_in_emeny = true
-	
-	print("body name: ", area.name)
-	if can_hurt:
-			health -= 10
-			print("【强制受伤】已扣血")
-			hurt_flash()
-			can_hurt = false
-			await get_tree().create_timer(1.0).timeout
-			can_hurt = true
+	is_in_emeny = false
 
-
-#func _on_hurt_box_area_entered(area: Area2D) -> void:
-	#pass # Replace with function body.
-
-
-func _on_hurt_box_body_exited(_body: Node2D) -> void:
-	print("exited")
-	is_in_emeny = true
-
-
-func hurt(demage:int)->void:
+func hurt(damage:int)->void:
 	if not can_hurt:
 		return
-	health -= demage
-	# 红光
-	
+	health -= damage
+
 func hurt_flash():
-	print("闪红函数执行")
-	var sprites = [walk_anim, jump_anim, run_anim, buzhuo_anim]
-	# 一次性全部变红
-	for s in sprites:
-		s.modulate = Color.RED
-	# 统一等待0.2秒
-	await get_tree().create_timer(0.2).timeout
-	# 一次性全部恢复原色
-	for s in sprites:
-		s.modulate = Color.WHITE
+	anim.modulate = Color.RED
+	var t = get_tree().create_timer(0.2)
+	t.timeout.connect(restore_color)
+
+func restore_color():
+	anim.modulate = Color.WHITE
